@@ -1,0 +1,24 @@
+{
+  "name": "webtail",
+  "version": "1.0.0",
+  "description": "Stream Logs to Browser",
+  "main": "ansi_up.js",
+  "dependencies": {
+    "parcel": "^1.9.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build:front": "node_modules/.bin/parcel build index.html",
+    "dev:front": "node_modules/.bin/parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xzyaoi/webtail.git"
+  },
+  "author": "Xiaozhe Yao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xzyaoi/webtail/issues"
+  },
+  "homepage": "https://github.com/xzyaoi/webtail#readme"
+}
