@@ -23,8 +23,9 @@ function renderLog (log) {
 }
 
 function preparePage () {
-    document.getElementById('connect_button').addEventListener('click',function(){
+    document.getElementById('connect_button').addEventListener('click',function (e) {
         initSocket()
+        e.preventDefault()
     })
 }
 
