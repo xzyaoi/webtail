@@ -3,11 +3,9 @@ var ansi_up = require('./ansi_up.js')
 function initSocket () {
     let socket = io('ws://192.168.1.4:8080', {transports: ['websocket']})
     socket.on('connect', function () {
-        console.log('socket connected')
         renderLog('socket connected')
     })
     socket.on('logevent', function(message) {
-        console.log(message.Data)
         renderLog(message.Data)
     })
 }
