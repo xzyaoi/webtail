@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="shortcut icon" href="./static/favicon.ico">
     <script src="https://cdn.staticfile.org/socket.io/2.1.1/socket.io.js"></script>
-    <script src="./js/socket.js"></script>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/marketing.css">
 </head>
@@ -24,12 +23,13 @@
                 <label for="server-addr">Server Address
                     <input id="server-addr" type="text">
                 </label>
-                <button onclick="initSocket()" class="pure-button pure-button-primary">Connect</button>
+                <button class="pure-button pure-button-primary" id="connect_button">Connect</button>
             </fieldset>
         </form>
         <pre id="log"></pre>
     </div>
 </body>
 <footer>
+    <script src="./js/socket.js"></script>
 </footer>
 </html>
