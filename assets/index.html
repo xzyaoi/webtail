@@ -19,6 +19,14 @@
         </div>
     </div>
     <div class="container">
+        <form class="pure-form">
+            <fieldset>
+                <label for="server-addr">Server Address
+                    <input id="server-addr" type="text">
+                </label>
+                <button onclick="initSocket()" class="pure-button pure-button-primary">Connect</button>
+            </fieldset>
+        </form>
         <pre id="log"></pre>
     </div>
 </body>

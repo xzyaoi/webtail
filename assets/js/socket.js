@@ -1,6 +1,8 @@
 var ansi_up = require('./ansi_up.js')
 
 function initSocket () {
+    let serverAddr = document.getElementById('server-addr').value
+    console.log(serverAddr)
     let socket = io('ws://192.168.1.4:8080', {transports: ['websocket']})
     socket.on('connect', function () {
         renderLog('socket connected')
@@ -20,5 +22,3 @@ function renderLog (log) {
     div.appendChild(p)
     document.getElementById('log').appendChild(div)
 }
-
-initSocket()
