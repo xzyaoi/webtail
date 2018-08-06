@@ -8,35 +8,6 @@
     height: 32px;
 }
 
-.input_group {
-    position: relative;
-    display:flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    width: 100%;
-}
-
-.input-group-prepend {
-    display: flex;
-}
-
-.input-group-text {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.form-control {
-    position: relative;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    width: 1%;
-    margin-bottom: 0;
-}
-
-.socket_input {
-    position: relative;
-    padding: 1rem;
-    margin: 1rem -15px 0;
-    border: solid #f8f9fa;
-    border-width: .2rem 0 0;
+.button-error {
+    background: rgb(202, 60, 60)!important; /* this is a maroon */
 }

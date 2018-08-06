@@ -1,10 +1,13 @@
 var ansi_up = require('./ansi_up.js')
 
+let connected = false
+
 function initSocket () {
     let serverAddr = document.getElementById('server-addr').value
     let socket = io('ws://' + serverAddr, {transports: ['websocket']})
     socket.on('connect', function () {
-        renderLog('socket connected')
+        connected = true
+        toggleStatus()
     })
     socket.on('logevent', function(message) {
         renderLog(message.Data)
@@ -20,6 +23,17 @@ function renderLog (log) {
     p.innerHTML = data
     div.appendChild(p)
     document.getElementById('log').appendChild(div)
+}
+
+function toggleStatus () {
+    if (connected) {
+        document.getElementById('connect_button').innerHTML = "Disconnect"
+        document.getElementById('connect_button').classList.remove("pure-button-primary")
+        document.getElementById('connect_button').classList.add("button-error")
+    } else {
+        document.getElementById('connect_button').innerHTML = "Connect"
+        document.getElementById('connect_button').classList.remove("pure-button-error")
+        document.getElementById('connect_button').classList.add("button-primary")    }
 }
 
 function preparePage () {
