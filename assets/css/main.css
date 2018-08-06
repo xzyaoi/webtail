@@ -1,0 +1,13 @@
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 7%;
+}
+
+.nav_img {
+    height: 32px;
+}
+
+.button-error {
+    background: rgb(202, 60, 60)!important; /* this is a maroon */
+}
