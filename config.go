@@ -1,12 +1,12 @@
 package main
 
 import (
-	"log"
 	"github.com/BurntSushi/toml"
+	"log"
 )
 
 type program struct {
-	Name string
+	Name   string
 	Stdout string
 	Stderr string
 }
@@ -18,11 +18,10 @@ type programs struct {
 var hostedPrograms programs
 
 func _readConfigFile() {
-	if (isExists(".webtail.toml")) {
-		if _, err := toml.DecodeFile(".webtail.toml", &hostedPrograms); err != nil {                                                                                                                                 
-			panic(err)                                                                                                                                                                                                 
-			return                                                                                                                                                                                                     
-		} 
+	if isExists(".webtail.toml") {
+		if _, err := toml.DecodeFile(".webtail.toml", &hostedPrograms); err != nil {
+			panic(err)
+		}
 	} else {
 		log.Fatal(".webtail.toml not existed!")
 	}
@@ -30,11 +29,11 @@ func _readConfigFile() {
 
 func _validateConfig() bool {
 	for _, p := range hostedPrograms.Program {
-		if (!isExists(p.Stderr)) {
+		if !isExists(p.Stderr) {
 			log.Fatal(p.Stderr + "not existed!")
 			return false
 		}
-		if (!isExists(p.Stdout)) {
+		if !isExists(p.Stdout) {
 			log.Fatal(p.Stdout + "not existed!")
 			return false
 		}
@@ -42,9 +41,9 @@ func _validateConfig() bool {
 	return true
 }
 
-func loadConfig () programs {
+func loadConfig() programs {
 	_readConfigFile()
-	if (!_validateConfig()) {
+	if !_validateConfig() {
 		log.Fatal("Start Webtail Failed!")
 	} else {
 		log.Println("Configuration Validation Passed!")
