@@ -8,6 +8,16 @@
 
 ## Getting Started
 
+1. Download binary executable program for you platform from [Releases](https://github.com/xzyaoi/webtail/releases)
+
+2. ``` tar -zxvf webtail_VERSION_PLATFORM.tar.gz ```
+
+3. ``` chmod +x webtail ```
+
+4. Put Configuration File (```.webtail.toml```) with the binary program.
+
+5. Start Server by ``` ./webtail ```
+
 ## Configuration
 
 When initiating WebTail Serve, you need a ```.webtail.toml``` in the folder where the webtail executable program locates.
@@ -22,7 +32,6 @@ stdout = "./nohup.out"
 name = "test2"
 stderr = "./nohup.out"
 stdout = "./test.log"
-
 ```
 
 ## Development
@@ -30,3 +39,5 @@ stdout = "./test.log"
 ## To Dos
 
 * [ ] Config Port in toml file
+* [ ] Use token to guard the socket
+* [ ] Allow Optional stdout/stderr
