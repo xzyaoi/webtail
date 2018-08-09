@@ -10,4 +10,23 @@
 
 ## Configuration
 
+When initiating WebTail Serve, you need a ```.webtail.toml``` in the folder where the webtail executable program locates.
+
+```
+[[program]]
+name = "test"
+stderr = "./test.log"
+stdout = "./nohup.out"
+
+[[program]]
+name = "test2"
+stderr = "./nohup.out"
+stdout = "./test.log"
+
+```
+
 ## Development
+
+## To Dos
+
+* [ ] Config Port in toml file
