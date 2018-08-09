@@ -18,6 +18,8 @@
 
 5. Start Server by ``` ./webtail ```
 
+6. Open [http://webtail.cvtron.xyz](http://webtail.cvtron.xyz), and typein your server ip address and port number(8080 as default). Such as ```8.8.8.8:8080```
+
 ## Configuration
 
 When initiating WebTail Serve, you need a ```.webtail.toml``` in the folder where the webtail executable program locates.
@@ -41,3 +43,4 @@ stdout = "./test.log"
 * [ ] Config Port in toml file
 * [ ] Use token to guard the socket
 * [ ] Allow Optional stdout/stderr
+* [ ] Multiple Program Selection in webpage
